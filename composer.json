@@ -1,0 +1,17 @@
+{
+    "name": "cogwizzle/dice-app",
+    "description": "Free dice app for helping players in table top rpg games.",
+    "type": "project",
+    "require": {
+        "jifish/ezdice": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2"
+    },
+    "authors": [
+        {
+            "name": "cogwizzle",
+            "email": "joe@cogwizzle.com"
+        }
+    ]
+}
