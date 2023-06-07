@@ -1,0 +1,20 @@
+{
+  "name": "dice-app",
+  "version": "1.0.0",
+  "description": "Dice App",
+  "author": "cogwizzle",
+  "scripts": {
+    "build:tailwind": "tailwindcss build -i assets/index.css -o public/index.css --watch",
+    "postinstall": [
+      "cp node_modules/php-wasm/php-web.* public/"
+    ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "g": "^2.0.1",
+    "php-wasm": "^0.0.7",
+    "serve": "^14.2.0"
+  }
+}
