@@ -1,6 +1,6 @@
     </div>
     <div class="footer">
-      <a href="https://bmc.link/cogwizzle">🕮 Buy Me a Book</a>
+      <a class="text-xl py-1 px-4 bg-black rounded-full text-white" href="https://bmc.link/cogwizzle">🕮 Buy Me a Book</a>
     </div>
   </body>
   <link rel="stylesheet" href="index.css" />
