@@ -25,17 +25,7 @@
         case 6:
           $shapeClass = 'fas fa-dice-d6';
           break;
-        case 8:
-          $shapeClass = 'fas fa-dice-d20';
-          break;
-        case 10:
-          $shapeClass = 'fas fa-dice-d20';
-          break;
-        case 12:
-          $shapeClass = 'fas fa-dice-d20';
-          break;
-        case 20:
-        case 100:
+        default: 
           $shapeClass = 'fas fa-dice-d20';
           break;
       }
