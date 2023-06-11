@@ -5,5 +5,5 @@
   </body>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <script src="/script/index.mjs" type="module"></script>
+  <script src="/script/index.js" type="module"></script>
 </html>

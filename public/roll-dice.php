@@ -1,5 +1,5 @@
 <?php
-  $vendorDir = 'vendor/';
+  $vendorDir = '../vendor/';
   require $vendorDir . 'jifish/ezdice/ezdice.php';
   
   $rollDice = function ($diceDescription) {
