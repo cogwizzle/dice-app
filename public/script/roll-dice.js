@@ -1,4 +1,4 @@
-import { EZDice } from './ezdice.mjs'
+import { EZDice } from './ezdice.js'
 
 const rollDice = (diceDescription) => {
   const diceBag = new EZDice()

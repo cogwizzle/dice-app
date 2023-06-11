@@ -1,5 +1,5 @@
-import rollDice from './roll-dice.mjs'
-import './my-result.mjs'
+import rollDice from './roll-dice.js'
+import './my-result.js'
 
 const form = document.querySelector('form')
 
