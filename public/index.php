@@ -1,4 +1,5 @@
 <?php
   include 'header/header.php';
-  include 'index.html';
+  include 'form.php';
+  include 'results.php';
   include 'footer/footer.php';

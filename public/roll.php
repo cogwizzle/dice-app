@@ -1,6 +1,6 @@
 <?php
   include 'header/header.php';
-  include 'index.html';
+  include 'form.php';
   require_once 'roll-dice.php';
 
   $diceDescription = $_POST['dice-description'];
@@ -8,40 +8,54 @@
   $diceResults = $rollDice($diceDescription);
   if ($_POST['dice-description']) {
 ?>
-<div class="text-sm text-slate-500 ml-2">You rolled <?php echo $diceDescription; ?></div>
-<div class="mx-auto w-full mb-3">
-  <p class="font-semibold text-xl text-center">Result</p>
-  <p class="font-bold text-3xl text-center"><?php echo $diceResults['total']; ?></p>
-</div>
-<ul class="flex flex-wrap flex-column w-100">
-<?php
-    $i = 0;
-    foreach ($diceResults['dice'] as $die) {
-      $shapeClass = '';
-      switch ($die['sides']) {
-        case 4:
-          $shapeClass = 'fas fa-play';
-          break;
-        case 6:
-          $shapeClass = 'fas fa-dice-d6';
-          break;
-        default: 
-          $shapeClass = 'fas fa-dice-d20';
-          break;
-      }
-      $i++;
-?>
-      <li class="flex-1 text-center pt-5">
-        <div>
-          <i class="h-5 w-10 fa-2xl <?php echo $shapeClass; ?>"></i>
-          <div id="D<?php echo $i ?>" name="D<?php echo $i ?>">
-            <?php echo $die['value']; ?>
+<div id="results" class="mt-5">
+  <div class="text-sm text-slate-500 ml-2">You rolled <?php echo $diceDescription; ?></div>
+  <div class="mx-auto w-full mb-3">
+    <p class="font-semibold text-xl text-center">Result</p>
+    <p class="font-bold text-3xl text-center"><?php echo $diceResults['total']; ?></p>
+  </div>
+  <ul class="text-center">
+  <?php
+      $i = 0;
+      foreach ($diceResults['dice'] as $die) {
+        $imgSrc = '';
+        switch ($die['sides']) {
+          case 4:
+            $imgSrc = '/icons/dice/D4.png';
+            break;
+          case 6:
+            $imgSrc = '/icons/dice/D6.png';
+            break;
+          case 8:
+            $imgSrc = '/icons/dice/D8.png';
+            break;
+          case 10:
+            $imgSrc = '/icons/dice/D10.png';
+            break;
+          case 12:
+            $imgSrc = '/icons/dice/D12.png';
+            break;
+          case 20:
+            $imgSrc = '/icons/dice/D20.png';
+            break;
+          default: 
+            $imgSrc = '/icons/dice/D6.png';
+            break;
+        }
+        $i++;
+  ?>
+        <li class="inline-block">
+          <div class="text-center w-20">
+            <img class="h-10 w-10 mx-auto" src="<?php echo $imgSrc; ?>"></img>
+            <div id="D<?php echo $i; ?>" name="D<?php echo $i; ?>">
+              <?php echo $die['value']; ?>
+            </div>
           </div>
-        </div>
-      </li>
-<?php
+        </li>
+  <?php
+      }
     }
-  }
-?>
-</ul>
+  ?>
+  </ul>
+</div>
 <?php include 'footer/footer.php';

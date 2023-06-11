@@ -37,24 +37,36 @@ export class MyResult extends HTMLElement {
         <p class="font-semibold text-xl text-center">Result</p>
         <p class="font-bold text-3xl text-center">${this._value.total}</p>
       </div>
-      <ul class="flex flex-wrap flex-column w-100">
+      <ul class="text-center">
         ${this._value.dice.map((die) => {
-          let shapeClass = ''
+          let imgSrc = ''
           switch (die.sides) {  
             case 4:
-              shapeClass = 'fas fa-play'
+              imgSrc = '/icons/dice/D4.png'
               break
             case 6:
-              shapeClass = 'fas fa-dice-d6'
+              imgSrc = '/icons/dice/D6.png'
               break
-            default:
-              shapeClass = 'fas fa-dice-d20'
+            case 8:
+              imgSrc = '/icons/dice/D8.png'
+              break
+            case 10:
+              imgSrc = '/icons/dice/D10.png'
+              break
+            case 12:
+              imgSrc = '/icons/dice/D12.png'
+              break
+            case 20:
+              imgSrc = '/icons/dice/D20.png'
+              break
+            default: 
+              imgSrc = '/icons/dice/D6.png'
               break
           }
           return `
-            <li class="flex-1 text-center pt-5">
-              <div>
-                <i class="h-5 w-10 fa-2xl ${shapeClass}"></i>
+            <li class="inline-block">
+              <div class="text-center w-20">
+                <img class="h-10 w-10 mx-auto" src="${imgSrc}"></img>
                 <div>
                   ${die.value}
                 </div>
