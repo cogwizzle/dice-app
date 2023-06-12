@@ -21,12 +21,8 @@ body {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  background-color: #fff;
   padding: 20px;
-  z-index: 10;
   text-align: center;
   cursor: pointer;
 }

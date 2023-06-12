@@ -6,6 +6,6 @@
     placeholder="Dice Notation example 2D6+4"
     class="p-1 border-2 border-gray-400 rounded-md"
   >
-  <input class="fab" type="submit" name="roll" value="🎲" title="Roll">
+  <button class="fab" type="submit" name="roll" title="Roll"><img class="h-5 w-5 invert" src="/icons/dice/D6.png" alt="dice"></img></button>
 </form>
 
