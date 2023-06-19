@@ -9,6 +9,7 @@ form.addEventListener('submit', (event) => {
   const data = Object.fromEntries(formData)
   const diceDescription = data['dice-description']
   const result = rollDice(diceDescription)
+  if (result === undefined) return
   const resultElement = document.querySelector('#results')
   const myResult = document.createElement('my-result')
   myResult.result = result
