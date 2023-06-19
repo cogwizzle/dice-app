@@ -4,10 +4,7 @@
   "description": "Dice App",
   "author": "cogwizzle",
   "scripts": {
-    "build:tailwind": "tailwindcss build -i assets/index.css -o public/index.css --watch",
-    "postinstall": [
-      "cp node_modules/php-wasm/php-web.* public/"
-    ]
+    "build:tailwind": "tailwindcss build -i assets/index.css -o public/index.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"

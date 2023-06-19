@@ -3,3 +3,7 @@ dev:
 
 tailwind:
 	npm run build:tailwind
+
+service-worker:
+	workbox generateSW workbox-config.js
+
