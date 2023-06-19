@@ -1,4 +1,5 @@
 import { EZDice } from './ezdice.js'
+import beep from './beep.js'
 
 let lastRole = 0;
 
@@ -14,9 +15,20 @@ const rollDice = (diceDescription) => {
   }
 }
 
+/*
+ * Play error noise if someone is trying to spame the roll button.
+ */
+const alarm = () => {
+  beep(100, 700, 25)
+  setTimeout(() => {
+    beep(100, 700, 25)
+  }, 125)
+}
+
 const rollDiceWithDebounce = (diceDescription) => {
   const now = new Date(Date.now()).getTime()
   if (now - lastRole < 1000) {
+    alarm()
     return
   }
   lastRole = now
