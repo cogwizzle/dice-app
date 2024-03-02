@@ -1,0 +1,65 @@
+{% extends "layout.twig.html" %}
+
+{% block main %}
+<section id="output" class="grid pico-color-zinc-950 pico-background-zinc-50">
+    {{ total }}
+</section>
+<section id="dice-buttons">
+    <div class="grid">
+        <span></span>
+        <span></span>
+        <form id="reset" action="/" method="get">
+            <button class="dice-button" type="submit">
+                Reset
+            </button>
+        </form>
+    </div>
+    <div class="grid">
+        <form id="d4" action="roll" method="get">
+            <input type="hidden" value="4" name="dice">
+            <button class="dice-button" type="submit">
+                <img src="icons/dice/D4.png" atl="d4" />
+                <div>D4</div>
+            </button>
+        </form>
+        <form id="d6" action="roll" method="get">
+            <input type="hidden" value="6" name="dice">
+            <button class="dice-button" type="submit">
+                <img src="icons/dice/D6.png" alt="d6" />
+                <div>D6</div>
+            </button>
+        </form>
+        <form id="d8" action="roll" method="get">
+            <input type="hidden" value="8" name="dice">
+            <button class="dice-button" type="submit">
+                <img src="icons/dice/D8.png" alt="d8" />
+                <div>D8</div>
+            </button>
+        </form>
+    </div>
+    <div class="grid">
+        <form id="d10" action="roll" method="get">
+            <input type="hidden" value="10" name="dice">
+            <button class="dice-button" type="submit">
+                <img src="icons/dice/D10.png" alt="d10" />
+                <div>D10</div>
+            </button>
+        </form>
+        <form id="d12" action="roll" method="get">
+            <input type="hidden" value="12" name="dice">
+            <button class="dice-button" type="submit">
+                <img src="icons/dice/D12.png" alt="d12" />
+                <div>D12</div>
+            </button>
+        </form>
+        <form id="d20" action="roll" method="get">
+            <input type="hidden" value="20" name="dice">
+            <button class="dice-button" type="submit">
+                <img src="icons/dice/D20.png" alt="d10" />
+                <div>D20</div>
+            </button>
+        </form>
+    </div>
+</section>
+<script src="/script/index.mjs" type="module"></script>
+{% endblock %}

@@ -3,10 +3,18 @@
     "description": "Free dice app for helping players in table top rpg games.",
     "type": "project",
     "require": {
-        "jifish/ezdice": "^1.0"
+        "jifish/ezdice": "^1.0",
+        "slim/psr7": "^1.6",
+        "slim/slim": "4.*",
+        "twig/twig": "^3.0",
+        "slim/twig-view": "^3.3",
+        "php-di/php-di": "^7.0",
+        "slim/flash": "^0.4.0",
+        "slim/csrf": "^1.3",
+        "guzzlehttp/guzzle": "^7.8"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.2"
+        "phpunit/phpunit": "^10"
     },
     "authors": [
         {
