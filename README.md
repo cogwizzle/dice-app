@@ -1,5 +1,5 @@
 # Dungeon Tools - Dice App
-Today I’m excited to announce a new tool that does just this! I’ve built a progressively enhanced PWA experience that works better with JavaScript, but still functions without it. I built this application for two reasons. The tool is called https://dice.dungeon-tools.com/. 
+Today I’m excited to announce a new tool that does just this! I’ve built a progressively enhanced PWA experience that works better with JavaScript, but still functions without it. The tool is called https://dice.dungeon-tools.com/. 
 
 ![image](https://github.com/cogwizzle/dice-app/assets/14897538/f101be9c-409b-4970-a3d5-eefb175a670c)
 Figure 1: Dice App
