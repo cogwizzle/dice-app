@@ -29,8 +29,6 @@ section#dice-buttons .dice-button img {
     height: 50px;
 }
 
-@media only screen and (prefers-color-scheme: dark) {
-    section#dice-buttons .dice-button img {
-        filter: invert(1);
-    }
+section#dice-buttons .dice-button img {
+    filter: invert(1);
 }
