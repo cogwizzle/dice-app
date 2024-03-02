@@ -6,6 +6,7 @@ use Slim\Views\TwigMiddleware;
 use App\Routes;
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/Routes/ApiRoutes.php';
 require __DIR__ . '/../src/Routes/HomeRoutes.php';
 
 // Sets up dependency injection container.
@@ -35,6 +36,6 @@ $app->add(TwigMiddleware::createFromContainer($app));
 
 // Functions to add routes in controllers.
 Routes\HomeRoutes($app);
+Routes\ApiRoutes($app);
 
 $app->run();
-
