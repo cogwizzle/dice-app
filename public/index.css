@@ -1,3 +1,7 @@
+main.container {
+    max-width: 500px;
+}
+
 section#dice-buttons div.grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -10,6 +14,15 @@ section#output {
     color: black;
     min-height: 80px;
     align-items: center;
+    padding: 10px;
+}
+
+section#output div img {
+    height: 20px;
+}
+
+section#output div div {
+    text-align: center;
 }
 
 section#dice-buttons .dice-button img {

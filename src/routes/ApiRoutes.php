@@ -8,29 +8,29 @@ use Slim\Routing\RouteCollectorProxy;
 require_once __DIR__ . '/Controllers/ApiController.php';
 
 function ApiRoutes(App $app) {
-    $app->group('/api', function(RouteCollectorProxy $group) {
-        $group->get('/d4', function(Request $request, Response $response) {
-            return ApiController::d4($request, $response);
+    $app->group('/api', function(RouteCollectorProxy $group) use ($app) {
+        $group->get('/d4', function(Request $request, Response $response) use ($app) {
+            return ApiController::d4($request, $response, $app);
         });
     
-        $group->get('/d6', function(Request $request, Response $response) {
-            return ApiController::d6($request, $response);
+        $group->get('/d6', function(Request $request, Response $response) use ($app) {
+            return ApiController::d6($request, $response, $app);
         });
 
-        $group->get('/d8', function(Request $request, Response $response) {
-            return ApiController::d8($request, $response);
+        $group->get('/d8', function(Request $request, Response $response) use ($app) {
+            return ApiController::d8($request, $response, $app);
         });
 
-        $group->get('/d10', function(Request $request, Response $response) {
-            return ApiController::d10($request, $response);
+        $group->get('/d10', function(Request $request, Response $response) use ($app) {
+            return ApiController::d10($request, $response, $app);
         });
 
-        $group->get('/d12', function(Request $request, Response $response) {
-            return ApiController::d12($request, $response);
+        $group->get('/d12', function(Request $request, Response $response) use ($app) {
+            return ApiController::d12($request, $response, $app);
         });
 
-        $group->get('/d20', function(Request $request, Response $response) {
-            return ApiController::d20($request, $response);
+        $group->get('/d20', function(Request $request, Response $response) use ($app) {
+            return ApiController::d20($request, $response, $app);
         });
     });
 }
