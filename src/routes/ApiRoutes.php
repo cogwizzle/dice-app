@@ -5,7 +5,7 @@ use Slim\App as App;
 use App\Routes\Controllers\ApiController;
 use Slim\Routing\RouteCollectorProxy;
 
-require_once __DIR__ . '/Controllers/ApiController.php';
+require_once __DIR__ . '/controllers/ApiController.php';
 
 function ApiRoutes(App $app) {
     $app->group('/api', function(RouteCollectorProxy $group) use ($app) {

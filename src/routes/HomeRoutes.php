@@ -4,7 +4,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App as App;
 use App\Routes\Controllers\HomeController;
 
-require_once __DIR__ . '/Controllers/HomeController.php';
+require_once __DIR__ . '/controllers/HomeController.php';
 
 function HomeRoutes(App $app) {
     $app->get('/', function(Request $request, Response $response) use ($app) {

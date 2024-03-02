@@ -6,8 +6,8 @@ use Slim\Views\TwigMiddleware;
 use App\Routes;
 
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../src/Routes/ApiRoutes.php';
-require __DIR__ . '/../src/Routes/HomeRoutes.php';
+require __DIR__ . '/../src/routes/ApiRoutes.php';
+require __DIR__ . '/../src/routes/HomeRoutes.php';
 
 // Sets up dependency injection container.
 $container = new Container();
