@@ -26,7 +26,7 @@ function roll(sides) {
                 const div = document.createElement('div');
                 output.appendChild(div);
                 const image = document.createElement('img');
-                image.src = `/icons/dice/d${sides}.png`;
+                image.src = `/icons/dice/D${sides}.png`;
                 const innerDiv = document.createElement('div');
                 innerDiv.textContent = `${result}`;
                 div.appendChild(image);
