@@ -14,4 +14,8 @@ function HomeRoutes(App $app) {
     $app->get('/roll', function(Request $request, Response $response) use ($app) {
         return HomeController::roll($request, $response, $app);
     });
+
+    $app->get('/dice.webmanifest', function(Request $request, Response $response) {
+        return HomeController::manifest($request, $response);
+    });
 }
