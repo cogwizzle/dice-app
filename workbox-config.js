@@ -9,7 +9,7 @@ module.exports = {
     ],
     swDest: 'public/sw.js',
     templatedURLs: {
-        '/': 'index.html',
+        '/': '/',
     },
     ignoreURLParametersMatching: [
         /^utm_/,
