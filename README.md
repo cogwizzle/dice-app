@@ -1,11 +1,11 @@
-Dungeon Tools - Dice App
-Recently I built another tool, https://dungeonworldcharacter.com/, as a static site that uses very little JavaScript in comparison with today’s modern goliaths. If you want to see more about that project check out this blog post here. In the retrospective of the project I noted that I would’ve built it differently if I had to do it all over again. I would’ve used progressive enhancement over top of a traditionally server rendered application.
-
+# Dungeon Tools - Dice App
 Today I’m excited to announce a new tool that does just this! I’ve built a progressively enhanced PWA experience that works better with JavaScript, but still functions without it. I built this application for two reasons. The tool is called https://dice.dungeon-tools.com/. 
 
 ![image](https://github.com/cogwizzle/dice-app/assets/14897538/f101be9c-409b-4970-a3d5-eefb175a670c)
 Figure 1: Dice App
-What is it?
+
+
+## What is it?
 This is a dice app that allows players to easily roll digital dice for Tabletop Role playing experiences. It will work with or without JavaScript. The site runs primarily on PHP. I built the PHP only experience first. It works with a slightly degraded experience if you use the PHP only experience. Every dice roll causes the page to refresh but it works.
 
 The app really shines with the JavaScript enabled experience. For starters it is a PWA. It allows folks to install the application like it is a native app as well as cache resources so that it is really fast on subsequent page loads. Additionally the PWA uses JavaScript exclusively to roll the dice and updates the UI with the results. You can see up to your last 8 rolls on screen.
@@ -14,10 +14,10 @@ The small amount of JavaScript that does exist on the site is written using HATE
 
 In addition to the progressively enhanced JavaScript experience we chose to go with Picocss this time around. This gives us light and dark themes based on the users preferences as well as some really sane defaults when it comes to plain Jane HTML element styling.
 
-API
+### API
 In addition to the app native functionality I also built a HATEOAS inspired REST API. I will likely tie this feature directly into the Dungeon World Character app to allow for the app to roll dice. The API is simple. We have d4, d6, d8, d10, d12, and d20 endpoints. The format is https://dice.dungeon-tools.com/api/d4. These APIs are open and free to use.
 
-Retrospective
+## Retrospective
 There are still small tweaks to be made to the dice app. I need to download and cache the Pico CSS library and I have one small cache issue that isn’t affecting any of the application execution. Obviously the plan is to patch those few things up over the next couple of days. Aside from those small pieces I’m actually really happy with using this progressive enhancement technique to build high quality experiences on the web.
 
 This application is really small so it was an easy case study on the progressively enhancing a web application. I’d like to continue this style of development to build high performance web applications in the future. Perhaps some of this technique can be moved over to some of my other projects. I love how little JavaScript is required. It brings me back to the early days of my career.
